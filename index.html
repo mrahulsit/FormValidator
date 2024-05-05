@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="images/form.png" type="image/x-icon">
+    <script src="index.js" type="text/javascript"></script>
+</head>
+<link rel="stylesheet" href="index.css">
+    <div class="container">
+        <div class="logo">
+            <img src="./logosu.jpg" alt="" srcset="">
+            <hr>
+        </div>
+        <div class="text-content">
+            <h2>Alumni Registration Form</h2>
+            <h5>Welcome! Please Fill out the details below and click the 'Register' button</h5>
+            <p>Note : Fields Marked with <FONT COLOR="red">*</FONT> are required</p>
+        </div>
+        <div class="table-container">
+            <form name="frmRegister" method="POST" action="./api/index.php">
+                <table align="center" border="2">
+                <tr>
+                    <td class="para">First Name <FONT COLOR="red">*</FONT><br><br>
+                        Middle Name</td>
+                    <td><input type="text" name="txtFName" size="30" maxlength="30" placeholder="Enter your First name">
+                        <input type="text" name="txtName" size="30" maxlength="30" placeholder="Enter your Middle name"></td>
+                </tr>
+                <tr>
+                    <td class="para">
+                        Last Name <FONT COLOR="red">*</FONT>
+                    </td>
+                    <td>
+                        <input type="text" name="txtLName" size="30" maxlength="30" placeholder="Enter your Last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="para">Branch <FONT COLOR="red">*</FONT><br><br>
+                        Batch <FONT COLOR="red">*</FONT></td>
+                    <td><select name="branch">
+                        <option value="">--Select--</option>
+                        <option value="CSE">Computer Science and Engineering</option>
+                        <option value="ECE">Electronics and Communication Engineering</option>
+                        <option value="EEE">Electrical and Electronics Engineering</option>
+                        <option value="EIE">Electronics and Instrumentation Engineering</option>
+                        <option value="CEN">Computer Engineering</option>
+                        <option value="CST">Computer Science and Technology Engineering</option>
+                    </select>
+                    <select name="Batch">
+                        <option value="">--Select--</option>
+                        <option value="CSE">2015</option>
+                        <option value="ECE">2016</option>
+                        <option value="EEE">2017</option>
+                        <option value="EIE">2018</option>
+                        <option value="CEN">2019</option>
+                        <option value="CST">2020</option>
+                        <option value="CST">2021</option>
+                        <option value="CST">2022</option>
+                        <option value="CST">2023</option>
+                        <option value="CST">2024</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td class="para">Year of Passing <FONT COLOR="red">*</FONT><br><br>
+                        Mobile Number <FONT COLOR="red">*</FONT></td>
+                    <td><input type="text" name="yearOfPass" size="30" maxlength="10" placeholder="Enter Year of Passing">
+                        <input type="text" name="mobileNo" size="30" maxlength="10" placeholder="Enter Mobile Number"></td>
+                </tr>
+                <tr>
+                    <td class="para">Email Address <FONT COLOR="red">*</FONT><br><br><br><br>
+                        Postal Address <FONT COLOR="red">*</FONT><br><br><br><br>
+                        Martial Status</td>
+                    <td><input type="text" name="eMail" size="30" maxlength="30" placeholder="Enter Email Address"><br>
+                        <textarea name="Postal" id="" cols="40" rows="5"></textarea><br>
+                        <label><input type="radio" name="MartialStatus" checked>Unmarried</label>
+                        <label><input type="radio" name="MartialStatus">Married</label> </td>
+                </tr>
+                <tr valign="top">
+                    <td class="para">
+                        <p>Addition Education <br><br>
+                        Tell us More <br> About Yourself <FONT COLOR="red">*</FONT><br><FONT SIZE="3pt">(Maximum 1000 Characters)</FONT><br><br><br><br><br><br><br><br><br><br>
+                        Receive Newsletter ?</p>
+                    </td>
+                    
+                    <td> 
+                        <label><input type="checkbox" name="AEDU">M.Tech</label>
+                        <label><input type="checkbox" name="AEDU">MBA</label> 
+                        <label><input type="checkbox" name="AEDU">PHD</label>
+                        <label><input type="checkbox" name="AEDU">Other <input type="text"></label>
+                        <textarea name="About" id="" rows="6"></textarea><br><br>
+                        <label><input type="radio" name="news">Yes</label>
+                        <label><input type="radio" name="news">No</label><br>
+                        <button type="button" name="register" onclick="javascript:validateForm()">Register Me!</button>
+                        <button type="button" name="rstBtn" onclick="javascript:clearForm()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+            <hr>
+            <div>
+                <footer>&copy; 2010-2024, All Rights Reserved <br>
+                Silicon University <br> Silicon Hills, Patia, Bhubaneswar=751024 <br>
+            Website : <a href="https://www.silicon.ac.in">www.silicon.ac.in</a></footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
