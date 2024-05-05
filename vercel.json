@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/server.js": {
-      "runtime": "vercel-node@0.0.8"
+      "runtime": "vercel-node@0.12"
     }
   },
   "routes": [
