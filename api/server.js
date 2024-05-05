@@ -2,15 +2,15 @@
 const http = require('http');
 const httpProxy = require('http-proxy');
 
-// Create a proxy instance
 const proxy = httpProxy.createProxyServer();
 
-// Proxy requests to the PHP server running on 127.0.0.1:8000
 const server = http.createServer((req, res) => {
-    proxy.web(req, res, {
-        target: 'http://127.0.0.1:8000'
-    });
+  proxy.web(req, res, {
+    target: 'http://127.0.0.1:8000' // Replace with the address of your PHP server
+  });
 });
 
-// Listen on port 3000
-server.listen(3000);
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Proxy server listening on port ${PORT}`);
+});
